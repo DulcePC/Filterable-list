@@ -6,12 +6,7 @@ function filterNames() {
     const names = document.getElementById('names');
     const items = names.querySelectorAll('li.collection-item');
     
-    items.forEach(item => {
-        if (contains(item, query))
-            show(item);
-        else
-            hide(item);
-    });
+    items.forEach(item => (contains(item, query)) ? show(item) : hide(item));
 }
 
 function contains(element, text) {
